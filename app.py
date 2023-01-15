@@ -30,7 +30,7 @@ pd.set_option('display.max_columns', 2000)
 pd.set_option('display.max_rows', 500)
 
 
-model = load('Fraudcheck-project-main\model.joblib')
+model = load('model.joblib')
 
 # page view setting...
 
@@ -83,7 +83,7 @@ def main():
     #__________________________________________________________________________________
     
     elif page == "Download Sample file format":
-        df = pd.read_csv('Fraudcheck-project-main\sample_format.csv')
+        df = pd.read_csv('sample_format.csv')
         tmp_download_link = download_link(df, 'sample_data_format.csv', 'Click here to download Sample file format!')
         st.markdown(tmp_download_link, unsafe_allow_html=True)
    #____________________________________________________________________________________________
@@ -165,11 +165,11 @@ def main():
                 
                     
             # label encoding  one hot encoding...
-            label_encoder_list = load('Fraudcheck-project-main\label_encoder_list.joblib')
-            one_hot_coder_list = load('Fraudcheck-project-main\one_hot_coder_list.joblib')
+            label_encoder_list = load('label_encoder_list.joblib')
+            one_hot_coder_list = load('one_hot_coder_list.joblib')
                     
-            label_to_column = load('Fraudcheck-project-main\label_to_column.joblib')
-            one_hot_column = load('Fraudcheck-project-main\one_hot_column.joblib')
+            label_to_column = load('label_to_column.joblib')
+            one_hot_column = load('one_hot_column.joblib')
                     
                     
             j = 0
