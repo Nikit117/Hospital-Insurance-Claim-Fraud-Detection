@@ -72,7 +72,7 @@ def main():
     if page == "Dashboard":
         st.subheader("Dashboard")
         st.write("This is the dashboard page")
-        st.image('F-project-main\OIP.jpg',use_column_width=True)
+        st.image('OIP.jpg',use_column_width=True)
     elif page =="Loaded file preview":
         if file is not None:
             preview = pd.read_csv(file)
