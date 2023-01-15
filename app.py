@@ -30,7 +30,7 @@ pd.set_option('display.max_columns', 2000)
 pd.set_option('display.max_rows', 500)
 
 
-model = load('ExcelR-project-main\model.joblib')
+model = load('Fraudcheck-project-main\model.joblib')
 
 # page view setting...
 
@@ -72,7 +72,7 @@ def main():
     if page == "Dashboard":
         st.subheader("Dashboard")
         st.write("This is the dashboard page")
-        st.image('ExcelR-project-main\OIP.jpg',use_column_width=True)
+        st.image('F-project-main\OIP.jpg',use_column_width=True)
     elif page =="Loaded file preview":
         if file is not None:
             preview = pd.read_csv(file)
@@ -83,7 +83,7 @@ def main():
     #__________________________________________________________________________________
     
     elif page == "Download Sample file format":
-        df = pd.read_csv('ExcelR-project-main\sample_format.csv')
+        df = pd.read_csv('Fraudcheck-project-main\sample_format.csv')
         tmp_download_link = download_link(df, 'sample_data_format.csv', 'Click here to download Sample file format!')
         st.markdown(tmp_download_link, unsafe_allow_html=True)
    #____________________________________________________________________________________________
@@ -165,11 +165,11 @@ def main():
                 
                     
             # label encoding  one hot encoding...
-            label_encoder_list = load('ExcelR-project-main\label_encoder_list.joblib')
-            one_hot_coder_list = load('ExcelR-project-main\one_hot_coder_list.joblib')
+            label_encoder_list = load('Fraudcheck-project-main\label_encoder_list.joblib')
+            one_hot_coder_list = load('Fraudcheck-project-main\one_hot_coder_list.joblib')
                     
-            label_to_column = load('ExcelR-project-main\label_to_column.joblib')
-            one_hot_column = load('ExcelR-project-main\one_hot_column.joblib')
+            label_to_column = load('Fraudcheck-project-main\label_to_column.joblib')
+            one_hot_column = load('Fraudcheck-project-main\one_hot_column.joblib')
                     
                     
             j = 0
@@ -239,7 +239,7 @@ st.sidebar.info('''The probelm statement given for this project was, predict whe
              This model is giving best F1-Score as 83.34% to 83.40% with high accuracy.''')
              
 st.sidebar.title('GitHub-Source Code:')
-link = 'https://github.com/ShrikantUppin/ExcelR-project'
+link = 'https://github.com/Nikit117/Hospital-Insurance-Claim-Fraud-Detection'
 st.sidebar.markdown(link, unsafe_allow_html=True)
              
 
