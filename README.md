@@ -1,2 +1,2 @@
-# ExcelR-project
+# Fraudcheck
 Hospital Claim Insurance Fraud Detection
